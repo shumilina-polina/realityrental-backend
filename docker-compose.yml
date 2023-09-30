@@ -3,8 +3,8 @@ services:
   strapi:
     container_name: strapi
     # build: .
-    image: kakvse:latest
-    # image: polinash22/kakvse-backend:latest
+    # image: kakvse:latest
+    image: polinash22/kakvse-backend:latest
     restart: unless-stopped
     env_file: .env
     environment:
