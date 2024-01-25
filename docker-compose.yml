@@ -2,9 +2,7 @@ version: "3"
 services:
   strapi:
     container_name: strapi
-    # build: .
-    # image: kakvse:latest
-    image: polinash22/kakvse-backend:latest
+    image: pushkeen/realityrental-backend:latest
     restart: unless-stopped
     env_file: .env
     environment:
@@ -23,9 +21,9 @@ services:
       - ./package.json:/opt/package.json
       - ./package-lock.json:/opt/package-lock.json # Replace with yarn.lock if using yarn
       - ./.env:/opt/app/.env
-      - ./kakvse-admin-media:/opt/app/public/uploads
+      - ./realityrental-media:/opt/app/public/uploads
     ports:
-      - "1337:1337"
+      - "1340:1340"
     networks:
       - strapi
     depends_on:
